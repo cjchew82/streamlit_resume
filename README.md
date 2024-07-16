@@ -1,9 +1,12 @@
-# Streamlit Portfolio
+# Streamlit Digital Resume
 
-this project's goal is to showcase :
+this is my personal digital resume project :
 
-- My experience in the data science field
+- My profile, experience, and others
 - Skills and background
 - Certifications and trainings 
+- Other project
 
-Ultimatly the pdf resume is starting to look a bit too generic and this is my attempt at making the experience of reading my resume more fluid and enjoyable to you, whoever you are ! have fun.
+Original code refer from
+https://github.com/MouadEt-tali
+https://github.com/Darshan660
