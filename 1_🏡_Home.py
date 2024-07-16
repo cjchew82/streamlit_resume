@@ -28,6 +28,8 @@ SAP SuccessFactors Senior Consultant @ Tenthpin Malaysia, specializing in HXM pr
 #     "LinkedIn": "https://www.linkedin.com/in/chuan-juen-cj-chew-99012462/",
 #     "GitHub": "https://github.com/cjchew82"
 # }
+
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 # Create columns for each social media link
 col1, col2, col3, col4 = st.columns(4)
 
