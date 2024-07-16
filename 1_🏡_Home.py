@@ -17,17 +17,45 @@ profile_pic = current_dir / "assets" / "home" /"profile-pic.png"
 my_zone_pic = current_dir / "assets" / "home" / "my_zone.png"
 
 # ------------ CONSTANTS ----------
-PAGE_TITLE = "Digital CV | Et-tali Mouad"
-PAGE_ICON = ":wave:"
-NAME = "Et-tali Mouad"
+PAGE_TITLE = "Digital Resume | CJ Chew"
+PAGE_ICON = "💼"
+NAME = "Chew Chuan Juen (CJ)"
 DESCRIPTION = """
-Data Scientist @ Aqsone,  I help clients optimize their performance with AI and data.
+SAP SuccessFactors Senior Consultant @ Tenthpin Malaysia, specializing in HXM project rollouts, passionate about programming and data-driven machine learning.
 """
-EMAIL = "mouad.et-tali@aqsone.com"
-SOCIAL_MEDIA = {
-    "LinkedIn": "https://www.linkedin.com/in/mouad-et-tali/",
-    "GitHub": "https://github.com/MouadEt-tali"
-}
+# EMAIL = "ccjuen@gmail.com"
+# SOCIAL_MEDIA = {
+#     "LinkedIn": "https://www.linkedin.com/in/chuan-juen-cj-chew-99012462/",
+#     "GitHub": "https://github.com/cjchew82"
+# }
+# Create columns for each social media link
+col1, col2, col3, col4 = st.columns(4)
+
+# Add LinkedIn link
+with col1:
+    st.markdown('<a href="https://www.linkedin.com/in/chuan-juen-cj-chew-99012462/" target="_blank" style="text-decoration:none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png?20140125013055" alt="LinkedIn" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;"></a>', unsafe_allow_html=True)
+    st.markdown('<p style="text-align:center;font-size:16px;margin-top:10px;">LinkedIn</p>', unsafe_allow_html=True)
+
+# Add GitHub link
+with col2:
+    st.markdown('<a href="https://github.com/cjchew82" target="_blank" style="text-decoration:none;"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;"></a>', unsafe_allow_html=True)
+    st.markdown('<p style="text-align:center;font-size:16px;margin-top:10px;">GitHub</p>', unsafe_allow_html=True)
+
+# Add WhatsApp link
+# with col3:
+#     st.markdown('<a href="https://wa.me/917710020979?text=Hello%20there,%20thanks%20for%20connecting!" style="text-decoration:none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="Twitter" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;"></a>', unsafe_allow_html=True)
+#     st.markdown('<p style="text-align:center;font-size:16px;margin-top:10px;">WhatsApp</p>', unsafe_allow_html=True)
+
+# Add X link    
+with col3:
+    st.markdown('<a href="https://x.com/cj7chew" style="text-decoration:none;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="Twitter" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;"></a>', unsafe_allow_html=True)
+    st.markdown('<p style="text-align:center;font-size:16px;margin-top:10px;">X</p>', unsafe_allow_html=True)
+
+# Add Email link
+with col4:
+    st.markdown('<a href="mailto:ccjuen@gmail.com"  target="_blank" style="text-decoration:none;"><img src="https://workspace.google.com/static/img/products/png/gmail.png?cache=f50ecb6" alt="Email" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;"></a>', unsafe_allow_html=True)
+    st.markdown('<p style="text-align:center;font-size:16px;margin-top:10px;">Email</p>', unsafe_allow_html=True)
+
 PROJECTS = {
     "🏆 Dimensionality reduction/clustering of data from scientific articles/ wikipedia summaries/news headlines": "https://github.com/MouadEttali/NLP-and-Text_Mining",
     "🏆 Implementation of a neural network for semi-supervised learning to predict MNIST data": "https://github.com/MouadEttali/ComputerVision_DeepLearning/tree/main/PseudoLabelingProject",
@@ -38,7 +66,7 @@ PROJECTS = {
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 
-st.title("Hello There")
+st.title("Hi / 您好 / Apa Kahbar")
 
 # --------------- HELPER FUNCTIONS -----------------------
 def V_SPACE(lines):
@@ -84,11 +112,12 @@ with cols[1]:
 
 # -------- SOCIALS ---------
 
-V_SPACE(1)
+# V_SPACE(1)
 
-cols = st.columns(len(SOCIAL_MEDIA))
-for index, (platform,link) in enumerate(SOCIAL_MEDIA.items()):
-    cols[index].write(f"[{platform}]({link})")
+# cols = st.columns(len(SOCIAL_MEDIA))
+# for index, (platform,link) in enumerate(SOCIAL_MEDIA.items()):
+#     cols[index].write(f"[{platform}]({link})")
+
 
 
 # ------- EXPERIENCE AND QUALIFS --------
@@ -104,8 +133,8 @@ st.write(
     - ✔️ Work feels best when it's **challenging enough to push me and not easy enough to make me bored**
     """
 ,unsafe_allow_html=True)
-st.image(my_zone_pic)
-st.write(""" ⚠️ Warning : if you hand me a boring task <span style="color:#f50057; font-size: 15;">I will try to automate it.</span>""",unsafe_allow_html=True)
+# st.image(my_zone_pic)
+# st.write(""" ⚠️ Warning : if you hand me a boring task <span style="color:#f50057; font-size: 15;">I will try to automate it.</span>""",unsafe_allow_html=True)
 # --- SKILLS ---
 st.write('\n')
 st.subheader("Hard Skills 🔬")
@@ -154,3 +183,7 @@ for project, link in PROJECTS.items():
 
 
 go_to_full_page("More Personal Projects" , "Personal Projects")
+
+# Add footer
+st.write('---')
+st.write('© Chew Chuan Juen  |  Last updated: July 2024')
