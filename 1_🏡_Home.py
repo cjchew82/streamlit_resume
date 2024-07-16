@@ -147,9 +147,6 @@ st.write(
 """ , unsafe_allow_html=True
 )
 
-go_to_full_page("Check out all my experiences" , "Professional Experiences")
-
-
 # --- Projects & Accomplishments ---
 st.write('\n')
 st.subheader("Personal Projects 🧙‍♂️")
@@ -157,10 +154,8 @@ st.write("---")
 for project, link in PROJECTS.items():
     st.write(f"[{project}]({link})")
 
-
-
-go_to_full_page("More Personal Projects" , "Personal Projects")
-
 # Add footer
 st.write('---')
 st.write('© Chew Chuan Juen  |  Last updated: July 2024')
+
+go_to_full_page("More Personal Projects" , "Personal Projects")
