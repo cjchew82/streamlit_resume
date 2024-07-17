@@ -3,6 +3,7 @@ from pathlib import Path
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 from PIL import Image
+import streamlit.components.v1 as components
 
 
 # ------------ PATH SETTINGS ----------
