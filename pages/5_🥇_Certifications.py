@@ -100,11 +100,11 @@ st.title("Certifications")
 def certification_section(CERTIFICATION_TITLE,CERTIFICATION_LINK,CERTIFICATION_DESCRIPTION,CERTIFICATION_PIC=None, embed_code=None):
     st.subheader(f"[{CERTIFICATION_TITLE}]({CERTIFICATION_LINK})")
     st.write(CERTIFICATION_DESCRIPTION, unsafe_allow_html=True)
-    if CERTIFICATION_PIC:
-        with st.expander("Check Certification"):
+    with st.expander("Check Certification"):
+        if CERTIFICATION_PIC:
             st.image(CERTIFICATION_PIC, width=800)
-    if embed_code:
-        components.html(embed_code, height=270)
+        if embed_code:
+            components.html(embed_code)
     st.write('----')
 # ----------- CSS, PDF & Profile Pic SETTINGS --------------
 
