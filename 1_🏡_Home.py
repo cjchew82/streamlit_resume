@@ -79,6 +79,22 @@ with open(resume_file, "rb") as pdf_file:
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
+# Add CSS for rounded profile picture
+st.markdown(
+    """
+    <style>
+    .profile-pic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        width: 230px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 profile_pic = Image.open(profile_pic)
 
 my_zone_pic = Image.open(my_zone_pic)
@@ -87,8 +103,9 @@ my_zone_pic = Image.open(my_zone_pic)
 cols = st.columns(2, gap='small')
 
 with cols[0]:
-    st.image(profile_pic)
+    # st.image(profile_pic)
     # st.image(profile_pic, width=230)
+    st.image(profile_pic, output_format="PNG", clamp=True, class_="profile-pic")
 
 
 with cols[1]:
