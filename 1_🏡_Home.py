@@ -173,12 +173,12 @@ with st.expander("***Project Implementation***"):
         """
         My experience in the full project implementation cycle:
         <ul>
-            <li>Facilitating workshops to gather requirements</li>
-            <li>Conducting system reviews and iterations, performing configuration testing</li>
-            <li>Delivering train-the-trainer sessions, conducting user acceptance tests</li>
-            <li>Providing go-live project support</li>
-            <li>Partially involved in Project Managing such as kick-off meeting</li>
-            <li>Additionally, I guide and collaborate closely with team members to ensure successful project delivery</li>
+            <li>•Facilitating workshops to gather requirements</li>
+            <li>•Conducting system reviews and iterations, performing configuration testing</li>
+            <li>•Delivering train-the-trainer sessions, conducting user acceptance tests</li>
+            <li>•Providing go-live project support</li>
+            <li>•Partially involved in Project Managing such as kick-off meeting</li>
+            <li>•Additionally, I guide and collaborate closely with team members to ensure successful project delivery</li>
         </ul>
         """, unsafe_allow_html=True
     )
@@ -187,9 +187,9 @@ with st.expander("***Business Development***"):
     st.write(
         """
         <ul>
-            <li>Work closely with the Business Development on any opportunity pipeline bidding presentation</li>
-            <li>Pre-sales demo to client, and discussion with client on project architecture framework</li>
-            <li>Workout on the project timeline and propose the project methodology to client during the bidding presentation</li>
+            <li>•Work closely with the Business Development on any opportunity pipeline bidding presentation</li>
+            <li>•Pre-sales demo to client, and discussion with client on project architecture framework</li>
+            <li>•Workout on the project timeline and propose the project methodology to client during the bidding presentation</li>
         </ul>
         """, unsafe_allow_html=True
     )
