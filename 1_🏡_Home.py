@@ -19,7 +19,7 @@ my_zone_pic = current_dir / "assets" / "home" / "my_zone.png"
 PAGE_TITLE = "Digital Resume | CJ Chew"
 PAGE_ICON = "💼"
 NAME = "Chuan Juen (CJ) Chew"
-GENDER = "♂️ MALE"
+GENDER = "MALE"
 DESCRIPTION = """
 SAP SuccessFactors Senior Consultant @ Tenthpin Malaysia, specializing in HXM project rollouts, 
 passionate about programming and data-driven machine learning.
@@ -40,12 +40,10 @@ SOCIAL_MEDIA_ICONS = {
     "Facebook": "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
     "Instagram": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
 }
-
 PROJECTS = {
-    "🏆 Dimensionality reduction/clustering of data from scientific articles/ wikipedia summaries/news headlines": "https://github.com/MouadEttali/NLP-and-Text_Mining",
-    "🏆 Implementation of a neural network for semi-supervised learning to predict MNIST data": "https://github.com/MouadEttali/ComputerVision_DeepLearning/tree/main/PseudoLabelingProject",
-    "🏆 Implementation of multiple regression and logistic regression algorithms from the mathematical foundations. ": "https://github.com/MouadEttali/From-scratch-machine-learning---From-mathematical-formulas-to-functioning-algorithms",
-    "🏆 This resume streamlit ": "https://github.com/MouadEttali/streamlit_resume",
+    "📋 Digital resume streamlit ": "https://github.com/MouadEttali/streamlit_resume",
+    "📊 Quantatitive Backtest App streamlit ": "",
+    "📈 Crypto Algorithm Trading Bot (Bybit)": ""
 }
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
@@ -93,7 +91,7 @@ with cols[0]:
 
 with cols[1]:
     st.title(NAME)
-    st.write("♀️",GENDER)
+    st.write("♀️♂️",GENDER)
     st.write(DESCRIPTION)
     st.download_button(
         label="📄 Download Resume",
@@ -121,16 +119,33 @@ for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
 # ------- EXPERIENCE AND QUALIFS --------
 
 V_SPACE(1)
-st.subheader('About me 🛝')
+st.subheader('About me 🧑‍🦱')
+# st.write(
+#     """
+#     - ✔️ **8 years of experience** in SAP SuccessFactors consulting firms for clients like <span style="color:#f50057; font-size: 15;">Total Energies , ONCF , Nexans, Allegro Musique </span> (Details in Professional Experiences)
+#     - ✔️ Built multiple ML based web applications (Python, Javascript, D3js, Streamlit) with deployment in AWS **(Sagemaker, API Gateway, Lambda).**
+#     - ✔️ Expertise in statistical principles and classical ML models
+#     - ✔️ Product and value oriented mindset ( my dream is to build valuable ML tools, my nightmare is models dying in notebooks )
+#     - ✔️ Work feels best when it's **challenging enough to push me and not easy enough to make me bored**
+#     """
+# ,unsafe_allow_html=True)
+
 st.write(
     """
-    - ✔️ **3 years of experience** in data science consulting firms for clients like <span style="color:#f50057; font-size: 15;">Total Energies , ONCF , Nexans, Allegro Musique </span> (Details in Professional Experiences)
-    - ✔️ Built multiple ML based web applications (Python, Javascript, D3js, Streamlit) with deployment in AWS **(Sagemaker, API Gateway, Lambda).** 
-    - ✔️ Expertise in statistical principles and classical ML models
-    - ✔️ Product and value oriented mindset ( my dream is to build valuable ML tools, my nightmare is models dying in notebooks )  
-    - ✔️ Work feels best when it's **challenging enough to push me and not easy enough to make me bored**
+    - ✔️ **8 years of experience** in SAP SuccessFactors Consulting across various industries, including 
+    <span style="color:#f50057; font-size: 15;">manufacturing, shared services, pharmaceutical, refinery & cracker, Life Science, </span> 
+    with involvement in multi-country implementations.
+    - ✔️ Certified Associate Consultant in **Employee Central, Recruiting (Candidate & Recruiter), Learning Management, and Onboarding.**
+    - ✔️ Project lead with comprehensive experience in the full HXM implementation project cycle and system maintenance, 
+    covering requirement workshops, iteration reviews, configuration, end-user training, user acceptance testing, and 
+    Go-Live hypercare support.
+    - ✔️ Solution Architect providing end-to-end HXM architecture flow and workaround solutions.
+    - ✔️ Expertise in the SuccessFactors platform, including Reporting Canvas, Integration Center, Job Profile Builder, 
+    and API endpoint scripting. Strong knowledge of HR data analysis.
+    - ✔️ **2 years of experience** in Python programming, with a passion for exploring data statistics and machine learning.
     """
 ,unsafe_allow_html=True)
+
 # st.image(my_zone_pic)
 # st.write(""" ⚠️ Warning : if you hand me a boring task <span style="color:#f50057; font-size: 15;">I will try to automate it.</span>""",unsafe_allow_html=True)
 # --- SKILLS ---
@@ -138,13 +153,10 @@ st.write('\n')
 st.subheader("Hard Skills 🔬")
 st.write(
     """
-- 👩‍💻 Programming: Python, SQL, pySpark
-- 🧪 Data science : Machine Learning, Ensemble methods (Bagging, Boosting) / kernel methods (SVM, SPCA), Deep Learning, Natural Language Processing, Optimisation
-- 📊 Data Visulization: PowerBi, Qlicksense, D3js
-- 📚 Transfer Learning: LLMS, CNNs, Transformers ...
-- 🗄️ Databases: Postgres, MongoDB, MySQL (on Premise and Cloud)
-- ☁️ Cloud : AWS (Certified Cloud Practitioner (CLF)), Palantir Foundry
-- 🚀 Deployment : Docker, Heroku, AWS 
+- 👩‍💻 Programming: Python, SQL, Microsoft Office, HTML
+- 🧪 Data science : Machine Learning, Deep Learning, Optimisation
+- 🗄️ Databases: Microsoft SQL Server
+- 🚀 Deployment : Github, Steamlit
 """
 )
 go_to_full_page("See my certifications and trainings" , "Certifications")
@@ -155,16 +167,30 @@ st.subheader("Recent Job Experience 🧑‍💻")
 st.write('---')
 
 st.write('\n')
-st.write("🚧", "**Data Scientist | Aqsone**")
-st.write("09/2022 - Present")
+st.write("🚧", "**SAP SuccessFactors Senior Consultant | Tenthpin Management Consultants Sdn Bhd**")
+st.write("12/2021 - Present")
 st.write(
     """
-- ► Collaborated on the creation of a <span style="color:#f50057; font-size: 15;">Digital costing</span>  solution that predicts cost of clothing items using Image and description, based on Convolutional Neural Networks and Transformers.
-- ► Development of a <span style="color:#f50057; font-size: 15;">360° Procurement</span> solution using Python, AWS MySQL and Google Data Studio with interactive dashboards including Forecasts, Spend Analysis, Supplier audit, CO2 emissions and more.
-- ► Participation in the creation of a <span style="color:#f50057; font-size: 15;">Succession Planning</span> solution that uses Machine Learning for optimal successor choice, using d3js for visualizations.
-- ► Commercial work : Participation in the <span style="color:#f50057; font-size: 15;">the developement of multiple proofs of concept</span> to demonstrate to prospects and clients for biz dev purposes
-- ► Internal work : Along 2 other data scientist and an Agile coach, we handle the management of different courses and certifications for the rest of the company.
-- ► Internal work : organization monthly presentations about the state of the art in the fields of data, AI and ML. As well as introduce new tools to our collaborators
+**Project Implementation**
+My experience in the full project implementation cycle 
+- Includes facilitating workshops to gather requirements, 
+- Conducting system reviews and iterations, performing configuration testing, 
+- Delivering train-the-trainer sessions, conducting user acceptance tests, 
+- Providing go-live project support. 
+- Also partially involved in Project Managing such as kick-off meeting. 
+- Additionally, I guide and collaborate closely with team members to ensure successful project delivery.
+
+**Business Development**
+- Work closely with the Business Development on any opportunity pipeline bidding presentation. 
+- Pre-sales demo to client, and discussion with client on project architecture framework. 
+- Workout on the project timeline and propose the project methodology to client during the bidding presentation.
+
+**Client Support**
+✅Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
+✅Project: Mindray (EC Integration and SF full suite system support)
+✅Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
+✅Project Fapon Biotech EC and Onboarding Rollout and support
+✅Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
 """ , unsafe_allow_html=True
 )
 
@@ -177,8 +203,6 @@ st.subheader("Personal Projects 🧙‍♂️")
 st.write("---")
 for project, link in PROJECTS.items():
     st.write(f"[{project}]({link})")
-
-
 
 go_to_full_page("More Personal Projects" , "Personal Projects")
 
