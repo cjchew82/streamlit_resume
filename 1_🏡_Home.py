@@ -92,7 +92,7 @@ with cols[0]:
 
 with cols[1]:
     st.title(NAME)
-    st.write("🚻",GENDER)
+    st.write("Gender:",GENDER)
     st.write(DESCRIPTION)
     st.download_button(
         label="⏳ Download Resume",
