@@ -16,20 +16,26 @@ css_file = current_dir / "styles" / "main.css"
 # DL_TUNE_CERTIFICATION_PIC_PATH = current_dir / "assets" / "certifications" / "dl_tuning.png"
 # AWS_CERTIFICATION_PIC_PATH = current_dir / "assets" / "certifications" / "aws_pract.png"
 # NLP_CERTIFICATION_PIC_PATH = current_dir / "assets" / "certifications" / "nlp.png"
-SAP_CERTIFICATION_PIC_PATH = current_dir / "assets" / "certifications" / "SF_EC.png"  # Add the new image path
+# SAP_CERTIFICATION_PIC_PATH = current_dir / "assets" / "certifications" / "SF_EC.png"  # Add the new image path
 
 # ------------ CONSTANTS ----------
 PAGE_TITLE = "Certifications | CJ Chew"
 PAGE_ICON = "📜"
 
 #-------- Certifications CONTENT----------
-SAP_CERTIFICATION_TITLE = "SAP Certified Associate - Implementation Consultant - SAP SuccessFactors Employee Central Core"
-SAP_CERTIFICATION_LINK = "https://www.credly.com/badges/a2464039-6ef2-4d9e-8421-7041b1580736/public_url"
-SAP_CERTIFICATION_DESCRIPTION = """
+SAP_CERTIFICATION_TITLE1 = "SAP Certified Associate - Implementation Consultant - SAP SuccessFactors Employee Central Core"
+SAP_CERTIFICATION_LINK1 = "https://www.credly.com/badges/a2464039-6ef2-4d9e-8421-7041b1580736/public_url"
+SAP_CERTIFICATION_DESCRIPTION1 = """
 - ✔ This certification validates that the candidate has the knowledge and skills to support and implment an <span style="color:#f50057; font-size: 15;">**SAP SuccessFactors Employee Central Core.**</span>
 - ✔ It demonstrates the candidate's ability to perform administrative tasks for SAP SuccessFactors Employee Central, including implmentation, and system administration.
     """ 
-
+SAP_CERTIFICATION_TITLE2 = "SAP Certified Associate - Implementation Consultant - SAP SuccessFactors Onboarding"
+SAP_CERTIFICATION_LINK2 = "https://www.credly.com/badges/79c59b87-4b63-41ac-bd2b-a55c60b4224c/public_url"
+SAP_CERTIFICATION_DESCRIPTION2 = """
+- ✔ This certification validates that the candidate has the knowledge and skills to support and implment an <span style="color:#f50057; font-size: 15;">**SAP SuccessFactors Onboarding.**</span>
+- ✔ It demonstrates the candidate's ability to perform administrative tasks for <span style="color:#f50057; font-size: 15;">**SAP SuccessFactors Onboarding**</span>, including implmentation, and system administration.
+    """ 
+    
 # AWS_ML_CERTIFICATION_TITLE = "AWS Certified Machine Learning Specialty 2023 - Hands On!"
 # AWS_ML_CERTIFICATION_PIC = Image.open(AWS_ML_CERTIFICATION_PIC_PATH)
 # AWS_ML_CERTIFICATION_LINK = "https://www.udemy.com/certificate/UC-c0613ef8-6d5c-49aa-8429-c384dfec8d36/"
@@ -133,7 +139,13 @@ with open(css_file) as f:
 # certification_section(NLP_CERTIFICATION_TITLE,NLP_CERTIFICATION_LINK,NLP_CERTIFICATION_DESCRIPTION,NLP_CERTIFICATION_PIC)
 
 # ------ CERTIFICATION SAP SECTION ---------
-credly_embed_code = '''
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a2464039-6ef2-4d9e-8421-7041b1580736" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+credly_embed_code1 = '''
+<div data-iframe-width="400" data-iframe-height="550" data-share-badge-id="a2464039-6ef2-4d9e-8421-7041b1580736" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 '''
-certification_section(SAP_CERTIFICATION_TITLE, SAP_CERTIFICATION_LINK, SAP_CERTIFICATION_DESCRIPTION, embed_code=credly_embed_code)
+credly_embed_code2 = '''
+<div data-iframe-width="400" data-iframe-height="550" data-share-badge-id="79c59b87-4b63-41ac-bd2b-a55c60b4224c" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+'''
+
+certification_section(SAP_CERTIFICATION_TITLE1, SAP_CERTIFICATION_LINK1, SAP_CERTIFICATION_DESCRIPTION1, embed_code=credly_embed_code1)
+
+certification_section(SAP_CERTIFICATION_TITLE2, SAP_CERTIFICATION_LINK2, SAP_CERTIFICATION_DESCRIPTION2, embed_code=credly_embed_code2)
