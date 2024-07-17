@@ -90,12 +90,21 @@ st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
 st.title("Certifications")
 # --------------- HELPER FUNCTIONS -----------------------
 
-def certification_section(CERTIFICATION_TITLE,CERTIFICATION_LINK,CERTIFICATION_DESCRIPTION,CERTIFICATION_PIC):
+# def certification_section(CERTIFICATION_TITLE,CERTIFICATION_LINK,CERTIFICATION_DESCRIPTION,CERTIFICATION_PIC):
 
+#     st.subheader(f"[{CERTIFICATION_TITLE}]({CERTIFICATION_LINK})")
+#     st.write(CERTIFICATION_DESCRIPTION, unsafe_allow_html=True)
+#     with st.expander("Check Certification"):
+#         st.image(CERTIFICATION_PIC,width=800)
+#     st.write('----')
+def certification_section(CERTIFICATION_TITLE,CERTIFICATION_LINK,CERTIFICATION_DESCRIPTION,CERTIFICATION_PIC=None, embed_code=None):
     st.subheader(f"[{CERTIFICATION_TITLE}]({CERTIFICATION_LINK})")
     st.write(CERTIFICATION_DESCRIPTION, unsafe_allow_html=True)
-    with st.expander("Check Certification"):
-        st.image(CERTIFICATION_PIC,width=800)
+    if CERTIFICATION_PIC:
+        with st.expander("Check Certification"):
+            st.image(CERTIFICATION_PIC, width=800)
+    if embed_code:
+        components.html(embed_code, height=270)
     st.write('----')
 # ----------- CSS, PDF & Profile Pic SETTINGS --------------
 
