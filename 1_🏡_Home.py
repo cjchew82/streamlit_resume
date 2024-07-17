@@ -132,16 +132,11 @@ st.subheader('About me 🧑‍🦱')
 
 st.write(
     """
-    - ✔️ **8 years of experience** in SAP SuccessFactors Consulting across various industries, including 
-    <span style="color:#f50057; font-size: 15;">manufacturing, shared services, pharmaceutical, refinery & cracker, Life Science, </span> 
-    with involvement in multi-country implementations.
+    - ✔️ **8 years of experience** in SAP SuccessFactors Consulting across various industries, including <span style="color:#f50057; font-size: 15;">manufacturing, shared services, pharmaceutical, refinery & cracker, Life Science, </span> with involvement in multi-country implementations.
     - ✔️ Certified Associate Consultant in **Employee Central, Recruiting (Candidate & Recruiter), Learning Management, and Onboarding.**
-    - ✔️ Project lead with comprehensive experience in the full HXM implementation project cycle and system maintenance, 
-    covering requirement workshops, iteration reviews, configuration, end-user training, user acceptance testing, and 
-    Go-Live hypercare support.
+    - ✔️ Project lead with comprehensive experience in the full HXM implementation project cycle and system maintenance, covering requirement workshops, iteration reviews, configuration, end-user training, user acceptance testing, and Go-Live hypercare support.
     - ✔️ Solution Architect providing end-to-end HXM architecture flow and workaround solutions.
-    - ✔️ Expertise in the SuccessFactors platform, including Reporting Canvas, Integration Center, Job Profile Builder, 
-    and API endpoint scripting. Strong knowledge of HR data analysis.
+    - ✔️ Expertise in the SuccessFactors platform, including Reporting Canvas, Integration Center, Job Profile Builder, and API endpoint scripting. Strong knowledge of HR data analysis.
     - ✔️ **2 years of experience** in Python programming, with a passion for exploring data statistics and machine learning.
     """
 ,unsafe_allow_html=True)
@@ -169,30 +164,68 @@ st.write('---')
 st.write('\n')
 st.write("🚧", "**SAP SuccessFactors Senior Consultant | Tenthpin Management Consultants Sdn Bhd**")
 st.write("12/2021 - Present")
-st.write(
-    """
-**Project Implementation**
-My experience in the full project implementation cycle 
-- Includes facilitating workshops to gather requirements, 
-- Conducting system reviews and iterations, performing configuration testing, 
-- Delivering train-the-trainer sessions, conducting user acceptance tests, 
-- Providing go-live project support. 
-- Also partially involved in Project Managing such as kick-off meeting. 
-- Additionally, I guide and collaborate closely with team members to ensure successful project delivery.
+# st.write(
+#     """
+# **Project Implementation**
+# My experience in the full project implementation cycle
+# - Includes facilitating workshops to gather requirements,
+# - Conducting system reviews and iterations, performing configuration testing,
+# - Delivering train-the-trainer sessions, conducting user acceptance tests,
+# - Providing go-live project support.
+# - Also partially involved in Project Managing such as kick-off meeting.
+# - Additionally, I guide and collaborate closely with team members to ensure successful project delivery.
+#
+# **Business Development**
+# - Work closely with the Business Development on any opportunity pipeline bidding presentation.
+# - Pre-sales demo to client, and discussion with client on project architecture framework.
+# - Workout on the project timeline and propose the project methodology to client during the bidding presentation.
+#
+# **Client Support**
+# ✅Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
+# ✅Project: Mindray (EC Integration and SF full suite system support)
+# ✅Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
+# ✅Project Fapon Biotech EC and Onboarding Rollout and support
+# ✅Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
+# """ , unsafe_allow_html=True
+# )
 
-**Business Development**
-- Work closely with the Business Development on any opportunity pipeline bidding presentation. 
-- Pre-sales demo to client, and discussion with client on project architecture framework. 
-- Workout on the project timeline and propose the project methodology to client during the bidding presentation.
+col1, col2, col3 = st.columns(3)
 
-**Client Support**
-✅Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
-✅Project: Mindray (EC Integration and SF full suite system support)
-✅Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
-✅Project Fapon Biotech EC and Onboarding Rollout and support
-✅Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
-""" , unsafe_allow_html=True
-)
+with col1:
+    st.subheader("Project Implementation")
+    st.write(
+        """
+        My experience in the full project implementation cycle:
+        - Facilitating workshops to gather requirements
+        - Conducting system reviews and iterations, performing configuration testing
+        - Delivering train-the-trainer sessions, conducting user acceptance tests
+        - Providing go-live project support
+        - Partially involved in Project Managing such as kick-off meeting
+        - Additionally, I guide and collaborate closely with team members to ensure successful project delivery
+        """
+    )
+
+with col2:
+    st.subheader("Business Development")
+    st.write(
+        """
+        - Work closely with the Business Development on any opportunity pipeline bidding presentation
+        - Pre-sales demo to client, and discussion with client on project architecture framework
+        - Workout on the project timeline and propose the project methodology to client during the bidding presentation
+        """
+    )
+
+with col3:
+    st.subheader("Client Support")
+    st.write(
+        """
+        ✅Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
+        ✅Project: Mindray (EC Integration and SF full suite system support)
+        ✅Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
+        ✅Project Fapon Biotech EC and Onboarding Rollout and support
+        ✅Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
+        """
+    )
 
 go_to_full_page("Check out all my experiences" , "Professional Experiences")
 
