@@ -172,32 +172,32 @@ with st.expander("***Project Implementation***"):
     st.write(
         """
         My experience in the full project implementation cycle:
-        – Facilitating workshops to gather requirements
-        – Conducting system reviews and iterations, performing configuration testing
-        – Delivering train-the-trainer sessions, conducting user acceptance tests
-        – Providing go-live project support
-        – Partially involved in Project Managing such as kick-off meeting
-        – Additionally, I guide and collaborate closely with team members to ensure successful project delivery
+        • Facilitating workshops to gather requirements
+        • Conducting system reviews and iterations, performing configuration testing
+        • Delivering train-the-trainer sessions, conducting user acceptance tests
+        • Providing go-live project support
+        • Partially involved in Project Managing such as kick-off meeting
+        • Additionally, I guide and collaborate closely with team members to ensure successful project delivery
         """
     )
 
 with st.expander("***Business Development***"):
     st.write(
         """
-        – Work closely with the Business Development on any opportunity pipeline bidding presentation
-        – Pre-sales demo to client, and discussion with client on project architecture framework
-        – Workout on the project timeline and propose the project methodology to client during the bidding presentation
+        • Work closely with the Business Development on any opportunity pipeline bidding presentation
+        • Pre-sales demo to client, and discussion with client on project architecture framework
+        • Workout on the project timeline and propose the project methodology to client during the bidding presentation
         """
     )
 
 with st.expander("***Client Support***"):
     st.write(
         """
-        - ✅ Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
-        - ✅ Project: Mindray (EC Integration and SF full suite system support)
-        - ✅ Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
-        - ✅ Project Fapon Biotech EC and Onboarding Rollout and support
-        - ✅ Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
+        ✅ Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
+        ✅ Project: Mindray (EC Integration and SF full suite system support)
+        ✅ Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
+        ✅ Project Fapon Biotech EC and Onboarding Rollout and support
+        ✅ Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
         """
     )
 
