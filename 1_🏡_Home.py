@@ -191,8 +191,7 @@ st.write("12/2021 - Present")
 
 col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.subheader("Project Implementation")
+with st.expander("Project Implementation"):
     st.write(
         """
         My experience in the full project implementation cycle:
@@ -205,8 +204,7 @@ with col1:
         """
     )
 
-with col2:
-    st.subheader("Business Development")
+with st.expander("Business Development"):
     st.write(
         """
         - Work closely with the Business Development on any opportunity pipeline bidding presentation
@@ -215,8 +213,7 @@ with col2:
         """
     )
 
-with col3:
-    st.subheader("Client Support")
+with st.expander("Client Support"):
     st.write(
         """
         ✅Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
