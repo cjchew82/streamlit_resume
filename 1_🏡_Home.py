@@ -86,9 +86,9 @@ my_zone_pic = Image.open(my_zone_pic)
 cols = st.columns(2, gap='small')
 
 with cols[0]:
-    # st.image(profile_pic)
+    st.image(profile_pic)
     # st.image(profile_pic, width=230)
-    st.image(profile_pic, use_column_width=False, width=230, output_format="PNG", caption="Profile Picture", clamp=True, class_="profile-pic")
+    # st.image(profile_pic, use_column_width=False, width=230, output_format="PNG", caption="Profile Picture", clamp=True, class_="profile-pic")
 
 with cols[1]:
     st.title(NAME)
