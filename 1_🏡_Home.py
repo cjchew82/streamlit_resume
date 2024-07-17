@@ -86,20 +86,21 @@ my_zone_pic = Image.open(my_zone_pic)
 cols = st.columns(2, gap='small')
 
 with cols[0]:
-    st.image(profile_pic)
+    # st.image(profile_pic)
     # st.image(profile_pic, width=230)
+    st.image(profile_pic, use_column_width=False, width=230, output_format="PNG", caption="Profile Picture", clamp=True, class_="profile-pic")
 
 with cols[1]:
     st.title(NAME)
     st.write("♀️♂️",GENDER)
     st.write(DESCRIPTION)
     st.download_button(
-        label="📄 Download Resume",
+        label="⏳ Download Resume",
         data= PDFbyte,
         file_name=resume_file.name,
         mime="application/octet-stream"
     )
-    st.write("📧",EMAIL)
+    st.write("📤",EMAIL)
 
 
 # -------- SOCIALS ---------
@@ -145,7 +146,7 @@ st.write(
 # st.write(""" ⚠️ Warning : if you hand me a boring task <span style="color:#f50057; font-size: 15;">I will try to automate it.</span>""",unsafe_allow_html=True)
 # --- SKILLS ---
 st.write('\n')
-st.subheader("Hard Skills 🔬")
+st.subheader("Hard Skills 🛠️")
 st.write(
     """
 - 👩‍💻 Programming: Python, SQL, Microsoft Office, HTML
@@ -158,69 +159,78 @@ go_to_full_page("See my certifications and trainings" , "Certifications")
 
 # --------- work history ---------
 V_SPACE(1)
-st.subheader("Recent Job Experience 🧑‍💻")
+st.subheader("Recent Job Experience 🏢")
 st.write('---')
 
 st.write('\n')
-st.write("🚧", "**SAP SuccessFactors Senior Consultant | Tenthpin Management Consultants Sdn Bhd**")
+st.write("💻", "**SAP SuccessFactors Senior Consultant | Tenthpin Management Consultants Sdn Bhd**")
 st.write("12/2021 - Present")
-# st.write(
-#     """
-# **Project Implementation**
-# My experience in the full project implementation cycle
-# - Includes facilitating workshops to gather requirements,
-# - Conducting system reviews and iterations, performing configuration testing,
-# - Delivering train-the-trainer sessions, conducting user acceptance tests,
-# - Providing go-live project support.
-# - Also partially involved in Project Managing such as kick-off meeting.
-# - Additionally, I guide and collaborate closely with team members to ensure successful project delivery.
-#
-# **Business Development**
-# - Work closely with the Business Development on any opportunity pipeline bidding presentation.
-# - Pre-sales demo to client, and discussion with client on project architecture framework.
-# - Workout on the project timeline and propose the project methodology to client during the bidding presentation.
-#
-# **Client Support**
-# ✅Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
-# ✅Project: Mindray (EC Integration and SF full suite system support)
-# ✅Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
-# ✅Project Fapon Biotech EC and Onboarding Rollout and support
-# ✅Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
-# """ , unsafe_allow_html=True
-# )
 
 col1, col2, col3 = st.columns(3)
 
-with st.expander("####Project Implementation"):
-    st.write(
+# with st.expander("***Project Implementation***"):
+#     st.write(
+#         """
+#         My experience in the full project implementation cycle:
+#         - Facilitating workshops to gather requirements
+#         - Conducting system reviews and iterations, performing configuration testing
+#         - Delivering train-the-trainer sessions, conducting user acceptance tests
+#         - Providing go-live project support
+#         - Partially involved in Project Managing such as kick-off meeting
+#         - Additionally, I guide and collaborate closely with team members to ensure successful project delivery
+#         """
+#     )
+
+# with st.expander("####Business Development"):
+#     st.write(
+#         """
+#         - Work closely with the Business Development on any opportunity pipeline bidding presentation
+#         - Pre-sales demo to client, and discussion with client on project architecture framework
+#         - Workout on the project timeline and propose the project methodology to client during the bidding presentation
+#         """
+#     )
+
+# with st.expander("####Client Support"):
+#     st.write(
+#         """
+#         - ✅ Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
+#         - ✅ Project: Mindray (EC Integration and SF full suite system support)
+#         - ✅ Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
+#         - ✅ Project Fapon Biotech EC and Onboarding Rollout and support
+#         - ✅ Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
+#         """
+#     )
+
+with st.expander("Project Implementation", expanded=False):
+    st.markdown(
         """
         My experience in the full project implementation cycle:
-        - Facilitating workshops to gather requirements
-        - Conducting system reviews and iterations, performing configuration testing
-        - Delivering train-the-trainer sessions, conducting user acceptance tests
-        - Providing go-live project support
-        - Partially involved in Project Managing such as kick-off meeting
-        - Additionally, I guide and collaborate closely with team members to ensure successful project delivery
+        – Facilitating workshops to gather requirements
+        – Conducting system reviews and iterations, performing configuration testing
+        – Delivering train-the-trainer sessions, conducting user acceptance tests
+        – Providing go-live project support
+        – Partially involved in Project Managing such as kick-off meeting
+        – Additionally, I guide and collaborate closely with team members to ensure successful project delivery
         """
     )
 
-with st.expander("####Business Development"):
-    st.write(
+with st.expander("Business Development", expanded=False):
+    st.markdown(
         """
-        - Work closely with the Business Development on any opportunity pipeline bidding presentation
-        - Pre-sales demo to client, and discussion with client on project architecture framework
-        - Workout on the project timeline and propose the project methodology to client during the bidding presentation
+        – Work closely with the Business Development on any opportunity pipeline bidding presentation
+        – Pre-sales demo to client, and discussion with client on project architecture framework
+        – Workout on the project timeline and propose the project methodology to client during the bidding presentation
         """
     )
 
-with st.expander("####Client Support"):
-    st.write(
+with st.expander("Client Support", expanded=False):
+    st.markdown(
         """
-        - ✅ Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
-        - ✅ Project: Mindray (EC Integration and SF full suite system support)
-        - ✅ Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
-        - ✅ Project Fapon Biotech EC and Onboarding Rollout and support
-        - ✅ Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
+        ✅ Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
+        ✅ Project: Mindray (EC Integration and SF full suite system support)
+        ✅ Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
+        ✅ Project Fapon Biotech EC and Onboarding Rollout and support
+        ✅ Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
         """
     )
 
@@ -229,7 +239,7 @@ go_to_full_page("Check out all my experiences" , "Professional Experiences")
 
 # --- Projects & Accomplishments ---
 st.write('\n')
-st.subheader("Personal Projects 🧙‍♂️")
+st.subheader("Personal Projects 🧠")
 st.write("---")
 for project, link in PROJECTS.items():
     st.write(f"[{project}]({link})")
