@@ -181,7 +181,7 @@ with st.expander("***Project Implementation***"):
         """
     )
 
-with st.expander("####Business Development"):
+with st.expander("***Business Development***"):
     st.write(
         """
         – Work closely with the Business Development on any opportunity pipeline bidding presentation
@@ -190,7 +190,7 @@ with st.expander("####Business Development"):
         """
     )
 
-with st.expander("####Client Support"):
+with st.expander("***Client Support***"):
     st.write(
         """
         - ✅ Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
