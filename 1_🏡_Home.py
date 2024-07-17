@@ -19,7 +19,7 @@ my_zone_pic = current_dir / "assets" / "home" / "my_zone.png"
 PAGE_TITLE = "Digital Resume | CJ Chew"
 PAGE_ICON = "💼"
 NAME = "Chuan Juen (CJ) Chew"
-GENDER = "MALE"
+GENDER = "MALE 🚹"
 DESCRIPTION = """
 SAP SuccessFactors Senior Consultant @ Tenthpin Malaysia, specializing in HXM project rollouts, 
 passionate about programming and data-driven machine learning.
@@ -92,7 +92,7 @@ with cols[0]:
 
 with cols[1]:
     st.title(NAME)
-    st.write("♀️♂️",GENDER)
+    st.write("🚻",GENDER)
     st.write(DESCRIPTION)
     st.download_button(
         label="⏳ Download Resume",
