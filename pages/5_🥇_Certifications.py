@@ -54,7 +54,7 @@ SAP_CERTIFICATION_DESCRIPTION5 = """
 # --------------------------------------
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
 
-st.title("Certifications")
+st.title("📜 Certifications")
 # --------------- HELPER FUNCTIONS -----------------------
 
 # def certification_section(CERTIFICATION_TITLE,CERTIFICATION_LINK,CERTIFICATION_DESCRIPTION,CERTIFICATION_PIC):
