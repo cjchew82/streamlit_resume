@@ -18,44 +18,27 @@ my_zone_pic = current_dir / "assets" / "home" / "my_zone.png"
 # ------------ CONSTANTS ----------
 PAGE_TITLE = "Digital Resume | CJ Chew"
 PAGE_ICON = "💼"
-NAME = "Chew Chuan Juen (CJ)"
+NAME = "Chuan Juen (CJ) Chew"
 DESCRIPTION = """
-SAP SuccessFactors Senior Consultant @ Tenthpin Malaysia, specializing in HXM project rollouts, passionate about programming and data-driven machine learning.
+SAP SuccessFactors Senior Consultant @ Tenthpin Malaysia, specializing in HXM project rollouts, 
+passionate about programming and data-driven machine learning.
 """
 EMAIL = "ccjuen@gmail.com"
 SOCIAL_MEDIA = {
     "LinkedIn": "https://www.linkedin.com/in/chuan-juen-cj-chew-99012462/",
-    "GitHub": "https://github.com/cjchew82"
+    "GitHub": "https://github.com/cjchew82",
+    "X": "",
+    "Facebook": "",
+    "Instagram": ""
 }
 
-# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
-# # Create columns for each social media link
-# col1, col2, col3, col4 = st.columns(4)
-
-# # Add LinkedIn link
-# with col1:
-#     st.markdown('<a href="https://www.linkedin.com/in/chuan-juen-cj-chew-99012462/" target="_blank" style="text-decoration:none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png?20140125013055" alt="LinkedIn" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;"></a>', unsafe_allow_html=True)
-#     st.markdown('<p style="text-align:center;font-size:16px;margin-top:10px;">LinkedIn</p>', unsafe_allow_html=True)
-
-# # Add GitHub link
-# with col2:
-#     st.markdown('<a href="https://github.com/cjchew82" target="_blank" style="text-decoration:none;"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;"></a>', unsafe_allow_html=True)
-#     st.markdown('<p style="text-align:center;font-size:16px;margin-top:10px;">GitHub</p>', unsafe_allow_html=True)
-
-# # Add WhatsApp link
-# # with col3:
-# #     st.markdown('<a href="https://wa.me/917710020979?text=Hello%20there,%20thanks%20for%20connecting!" style="text-decoration:none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="Twitter" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;"></a>', unsafe_allow_html=True)
-# #     st.markdown('<p style="text-align:center;font-size:16px;margin-top:10px;">WhatsApp</p>', unsafe_allow_html=True)
-
-# # Add X link
-# with col3:
-#     st.markdown('<a href="https://x.com/cj7chew" style="text-decoration:none;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="Twitter" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;"></a>', unsafe_allow_html=True)
-#     st.markdown('<p style="text-align:center;font-size:16px;margin-top:10px;">X</p>', unsafe_allow_html=True)
-
-# # Add Email link
-# with col4:
-#     st.markdown('<a href="mailto:ccjuen@gmail.com"  target="_blank" style="text-decoration:none;"><img src="https://workspace.google.com/static/img/products/png/gmail.png?cache=f50ecb6" alt="Email" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;"></a>', unsafe_allow_html=True)
-#     st.markdown('<p style="text-align:center;font-size:16px;margin-top:10px;">Email</p>', unsafe_allow_html=True)
+SOCIAL_MEDIA_ICONS = {
+    "LinkedIn": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png?20140125013055",
+    "GitHub": "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    "X": "https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg",
+    "Facebook": "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+    "Instagram": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+}
 
 PROJECTS = {
     "🏆 Dimensionality reduction/clustering of data from scientific articles/ wikipedia summaries/news headlines": "https://github.com/MouadEttali/NLP-and-Text_Mining",
@@ -66,6 +49,14 @@ PROJECTS = {
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
+# Function to generate social media icons
+def social_media_icon(link, icon_url, name):
+    return f'''
+    <a href="{link}" target="_blank" style="text-decoration:none;">
+        <img src="{icon_url}" alt="{name}" width="40" height="40" style="display:block;margin-left:auto;margin-right:auto;">
+    </a>
+    <p style="text-align:center;font-size:16px;margin-top:10px;">{name}</p>
+    '''
 
 st.title("Hi / 您好 / Apa Kahbar")
 
@@ -115,9 +106,15 @@ with cols[1]:
 
 V_SPACE(1)
 
+# cols = st.columns(len(SOCIAL_MEDIA))
+# for index, (platform,link) in enumerate(SOCIAL_MEDIA.items()):
+#     cols[index].write(f"[{platform}]({link})")
+
+# Social media icons display
 cols = st.columns(len(SOCIAL_MEDIA))
-for index, (platform,link) in enumerate(SOCIAL_MEDIA.items()):
-    cols[index].write(f"[{platform}]({link})")
+for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
+    with cols[index]:
+        st.markdown(social_media_icon(link, SOCIAL_MEDIA_ICONS[platform], platform), unsafe_allow_html=True)
 
 # ------- EXPERIENCE AND QUALIFS --------
 
