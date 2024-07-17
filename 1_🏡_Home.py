@@ -1,8 +1,8 @@
 from pathlib import Path
-
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 from PIL import Image
+import streamlit.components.v1 as components
 
 # ------------ PATH SETTINGS ----------
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
@@ -56,6 +56,45 @@ def social_media_icon(link, icon_url, name):
     </a>
     <p style="text-align:center;font-size:16px;margin-top:10px;">{name}</p>
     '''
+
+# Sidebar content
+st.sidebar.title("Menu")
+
+# --------- HELPER FUNCTIONS FOR SIDEBAR --------
+def sidebar_item(icon, name, key=None):
+    if st.sidebar.button(icon, key=key):
+        st.session_state['sidebar_expanded'] = not st.session_state.get('sidebar_expanded', True)
+    if st.session_state.get('sidebar_expanded', True):
+        st.sidebar.write(name)
+
+# Sidebar items with icons
+sidebar_item("🏡", "Home", key="home")
+sidebar_item("🎓", "Academic Background", key="academic")
+sidebar_item("💼", "Professional Experiences", key="professional")
+sidebar_item("🔬", "Personal Projects", key="projects")
+sidebar_item("📜", "Certifications", key="certifications")
+
+# Main content
+if st.session_state.get('home', False):
+    st.title("🏡 Home")
+    st.write("This is the home page of the resume.")
+
+if st.session_state.get('academic', False):
+    st.title("🎓 Academic Background")
+    st.write("This is the academic background section of the resume.")
+
+if st.session_state.get('professional', False):
+    st.title("💼 Professional Experiences")
+    st.write("This is the professional experiences section of the resume.")
+
+if st.session_state.get('projects', False):
+    st.title("🔬 Personal Projects")
+    st.write("This is the personal projects section of the resume.")
+
+if st.session_state.get('certifications', False):
+    st.title("📜 Certifications")
+    st.write("This is the certifications section of the resume.")
+
 
 st.title("Hi / 您好 / Apa Kahbar")
 

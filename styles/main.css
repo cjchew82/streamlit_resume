@@ -41,3 +41,12 @@ header {visibility: visible;}
     color: #2E8B57; /* Customize the color */
     font-family: 'Readex Pro', sans-serif; /* Customize the font */
 }
+
+.sidebar .sidebar-content {
+    width: 50px; /* initial width of the sidebar */
+    transition: width 0.2s ease-in-out;
+}
+
+.sidebar-expanded .sidebar-content {
+    width: 200px; /* expanded width of the sidebar */
+}
