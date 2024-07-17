@@ -140,10 +140,10 @@ with open(css_file) as f:
 
 # ------ CERTIFICATION SAP SECTION ---------
 credly_embed_code1 = '''
-<div data-share-badge-id="a2464039-6ef2-4d9e-8421-7041b1580736" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+<div data-iframe-width="250" data-iframe-height="550" data-share-badge-id="a2464039-6ef2-4d9e-8421-7041b1580736" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 '''
 credly_embed_code2 = '''
-<div data-share-badge-id="79c59b87-4b63-41ac-bd2b-a55c60b4224c" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+<div data-iframe-width="250" data-iframe-height="550" data-share-badge-id="79c59b87-4b63-41ac-bd2b-a55c60b4224c" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 '''
 
 certification_section(SAP_CERTIFICATION_TITLE1, SAP_CERTIFICATION_LINK1, SAP_CERTIFICATION_DESCRIPTION1, embed_code=credly_embed_code1)
