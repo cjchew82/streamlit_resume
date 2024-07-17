@@ -87,7 +87,8 @@ my_zone_pic = Image.open(my_zone_pic)
 cols = st.columns(2, gap='small')
 
 with cols[0]:
-    st.image(profile_pic, width=230)
+    st.image(profile_pic)
+    # st.image(profile_pic, width=230)
 
 
 with cols[1]:
