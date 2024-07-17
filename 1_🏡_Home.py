@@ -172,33 +172,39 @@ with st.expander("***Project Implementation***"):
     st.write(
         """
         My experience in the full project implementation cycle:
-        • Facilitating workshops to gather requirements
-        • Conducting system reviews and iterations, performing configuration testing
-        • Delivering train-the-trainer sessions, conducting user acceptance tests
-        • Providing go-live project support
-        • Partially involved in Project Managing such as kick-off meeting
-        • Additionally, I guide and collaborate closely with team members to ensure successful project delivery
-        """
+        <ul>
+            <li>Facilitating workshops to gather requirements</li>
+            <li>Conducting system reviews and iterations, performing configuration testing</li>
+            <li>Delivering train-the-trainer sessions, conducting user acceptance tests</li>
+            <li>Providing go-live project support</li>
+            <li>Partially involved in Project Managing such as kick-off meeting</li>
+            <li>Additionally, I guide and collaborate closely with team members to ensure successful project delivery</li>
+        </ul>
+        """, unsafe_allow_html=True
     )
 
 with st.expander("***Business Development***"):
     st.write(
         """
-        • Work closely with the Business Development on any opportunity pipeline bidding presentation
-        • Pre-sales demo to client, and discussion with client on project architecture framework
-        • Workout on the project timeline and propose the project methodology to client during the bidding presentation
-        """
+        <ul>
+            <li>Work closely with the Business Development on any opportunity pipeline bidding presentation</li>
+            <li>Pre-sales demo to client, and discussion with client on project architecture framework</li>
+            <li>Workout on the project timeline and propose the project methodology to client during the bidding presentation</li>
+        </ul>
+        """, unsafe_allow_html=True
     )
 
 with st.expander("***Client Support***"):
     st.write(
         """
-        ✅ Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)
-        ✅ Project: Mindray (EC Integration and SF full suite system support)
-        ✅ Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)
-        ✅ Project Fapon Biotech EC and Onboarding Rollout and support
-        ✅ Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)
-        """
+        <ul>
+            <li>✅ Project: Clover Biopharmaceuticals (EC, RCM, and ONB 2.0 Oversea UK and US implementation)</li>
+            <li>✅ Project: Mindray (EC Integration and SF full suite system support)</li>
+            <li>✅ Project: Clover Biopharmaceuticals (Compensation new worksheet implementation)</li>
+            <li>✅ Project Fapon Biotech EC and Onboarding Rollout and support</li>
+            <li>✅ Project: ND Paper SAP HCM Malaysia Payroll (Project Manager)</li>
+        </ul>
+        """, unsafe_allow_html=True
     )
 
 go_to_full_page("Check out all my experiences" , "Professional Experiences")
