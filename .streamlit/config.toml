@@ -9,4 +9,4 @@ backgroundColor = "#ADEFD1FF"
 secondaryBackgroundColor = "#00203FFF"
 
 # Color used for almost all text.
-textColor = "#fff" 
+textColor = "#000000" 
