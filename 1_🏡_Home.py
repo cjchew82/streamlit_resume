@@ -58,21 +58,47 @@ def social_media_icon(link, icon_url, name):
     '''
 
 # Sidebar content
-st.sidebar.title("Menu")
-
-# --------- HELPER FUNCTIONS FOR SIDEBAR --------
 def sidebar_item(icon, name, key=None):
-    if st.sidebar.button(icon, key=key):
+    st.sidebar.markdown(f"""
+        <div class="icon-item">
+            <a href="#" onclick="toggleSidebar('{key}')">
+                <i class="fa {icon}" style="font-size:24px;"></i>
+            </a>
+            <span class="tooltip">{name}</span>
+        </div>
+    """, unsafe_allow_html=True)
+    if st.session_state.get(key, False):
         st.session_state['sidebar_expanded'] = not st.session_state.get('sidebar_expanded', True)
-    if st.session_state.get('sidebar_expanded', True):
-        st.sidebar.write(name)
 
-# Sidebar items with icons
-sidebar_item("🏡", "Home", key="home")
-sidebar_item("🎓", "Academic Background", key="academic")
-sidebar_item("💼", "Professional Experiences", key="professional")
-sidebar_item("🔬", "Personal Projects", key="projects")
-sidebar_item("📜", "Certifications", key="certifications")
+st.sidebar.markdown("""
+    <script>
+        function toggleSidebar(key) {
+            var expanded = localStorage.getItem(key);
+            if (expanded === "true") {
+                localStorage.setItem(key, "false");
+                document.body.classList.remove("sidebar-expanded");
+            } else {
+                localStorage.setItem(key, "true");
+                document.body.classList.add("sidebar-expanded");
+            }
+        }
+    </script>
+""", unsafe_allow_html=True)
+
+# Check sidebar expanded state
+if 'sidebar_expanded' not in st.session_state:
+    st.session_state['sidebar_expanded'] = False
+
+# Add the expanded class to the body if sidebar is expanded
+if st.session_state['sidebar_expanded']:
+    st.markdown('<style>body{overflow: hidden;}body.sidebar-expanded .sidebar-content { width: 60px; }</style>', unsafe_allow_html=True)
+
+# Sidebar items with Font Awesome icons
+sidebar_item("fa-home", "Home", key="home")
+sidebar_item("fa-graduation-cap", "Academic Background", key="academic")
+sidebar_item("fa-briefcase", "Professional Experiences", key="professional")
+sidebar_item("fa-flask", "Personal Projects", key="projects")
+sidebar_item("fa-certificate", "Certifications", key="certifications")
 
 # Main content
 if st.session_state.get('home', False):
