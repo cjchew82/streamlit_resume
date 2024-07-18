@@ -1,3 +1,10 @@
+[server]
+headless = true
+port = 8501
+enableCORS = false
+enableXsrfProtection = false
+mainModule = "Home.py"
+
 [theme]
 # Primary accent color for interactive elements.
 primaryColor = "#d33682"
