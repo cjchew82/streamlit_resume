@@ -1,5 +1,4 @@
 from pathlib import Path
-
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 from PIL import Image
@@ -69,7 +68,7 @@ DADVISOR_DESCRIPTION = """
     - ► Participated in the development of a real time monitoring application for industrial machines using Flask.
     """ 
 # --------------------------------------
-# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
+# st.set_page_config(page_title="Digital Resume | CJ Chew", page_icon="💼", layout="wide")
 
 st.title("Professional Experiences")
 # --------------- HELPER FUNCTIONS -----------------------

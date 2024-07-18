@@ -1,21 +1,18 @@
 from pathlib import Path
 import streamlit as st
-# st.set_page_config(page_title="Digital Resume | CJ Chew", page_icon="💼")
 from streamlit_extras.switch_page_button import switch_page
 from PIL import Image
 import streamlit.components.v1 as components
 
 # ------------ PATH SETTINGS ----------
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-
-# Update the paths to be relative to the current directory
-css_file = current_dir / ".." / "styles" / "main.css"
-resume_file = current_dir / ".." / "assets" / "CJCHEW-Resume_2023_v1.pdf"
-profile_pic = current_dir / ".." / "assets" / "home" / "profile-pic.png"
+css_file = current_dir / "styles" / "main.css"
+resume_file = current_dir / "assets" / "CJCHEW-Resume_2023_v1.pdf"
+profile_pic = current_dir / "assets" / "home" /"profile-pic.png"
 
 # ------------ CONSTANTS ----------
-# PAGE_TITLE = "Digital Resume | CJ Chew"
-# PAGE_ICON = "💼"
+PAGE_TITLE = "Digital Resume | CJ Chew"
+PAGE_ICON = "💼"
 NAME = "Chuan Juen (CJ) Chew"
 GENDER = "MALE 🚹"
 DESCRIPTION = """
@@ -44,7 +41,7 @@ PROJECTS = {
     "📈 Crypto Algorithm Trading Bot (Bybit)": ""
 }
 
-# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout="wide")
 
 # Function to generate social media icons
 def social_media_icon(link, icon_url, name):
@@ -66,6 +63,16 @@ def go_to_full_page(label,page):
     personal_project = st.button(label)
     if personal_project:
         switch_page(page)
+        
+# go_to_full_page("See my certifications and trainings" , "Certifications")
+# def go_switch_page(label,page):
+#     click = st.button(page)
+#     if click == "Working Experiences":
+#         st.switch_page("pages/3_Working_Experiences.py")
+#     if click == "Certifications":
+#         st.switch_page("pages/4_Certifications.py")
+#     if click == "Personal Projects":
+#         st.switch_page("pages/5_Personal_Projects.py")
 
 
 # ----------- CSS, PDF & Profile Pic SETTINGS --------------
@@ -119,16 +126,7 @@ for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
 
 V_SPACE(1)
 st.subheader('About me 🧑‍🦱')
-# st.write(
-#     """
-#     - ✔️ **8 years of experience** in SAP SuccessFactors consulting firms for clients like <span style="color:#f50057; font-size: 15;">Total Energies , ONCF , Nexans, Allegro Musique </span> (Details in Professional Experiences)
-#     - ✔️ Built multiple ML based web applications (Python, Javascript, D3js, Streamlit) with deployment in AWS **(Sagemaker, API Gateway, Lambda).**
-#     - ✔️ Expertise in statistical principles and classical ML models
-#     - ✔️ Product and value oriented mindset ( my dream is to build valuable ML tools, my nightmare is models dying in notebooks )
-#     - ✔️ Work feels best when it's **challenging enough to push me and not easy enough to make me bored**
-#     """
-# ,unsafe_allow_html=True)
-
+st.write('---')
 st.write(
     """
     - ✔️ **8 years of experience** in SAP SuccessFactors Consulting across various industries, including <span style="color:#f50057; font-size: 15;">manufacturing, shared services, pharmaceutical, refinery & cracker, Life Science, </span> with involvement in multi-country implementations.
@@ -143,8 +141,9 @@ st.write(
 # st.image(my_zone_pic)
 # st.write(""" ⚠️ Warning : if you hand me a boring task <span style="color:#f50057; font-size: 15;">I will try to automate it.</span>""",unsafe_allow_html=True)
 # --- SKILLS ---
-st.write('\n')
+V_SPACE(1)
 st.subheader("Hard Skills 🛠️")
+st.write('---')
 st.write(
     """
 - 👩‍💻 Programming: Python, SQL, Microsoft Office, HTML
@@ -154,13 +153,12 @@ st.write(
 """
 )
 go_to_full_page("See my certifications and trainings" , "Certifications")
-
+# go_switch_page("See my certifications and trainings" , "Certifications")
+    
 # --------- work history ---------
 V_SPACE(1)
 st.subheader("Recent Job Experience 🏢")
 st.write('---')
-
-st.write('\n')
 st.write("💻", "**SAP SuccessFactors Senior Consultant | Tenthpin Management Consultants Sdn Bhd**")
 st.write("12/2021 - Present")
 
@@ -205,11 +203,10 @@ with st.expander("***Client Support***"):
         """, unsafe_allow_html=True
     )
 
-go_to_full_page("Check out all my experiences" , "Professional Experiences")
+go_to_full_page("Check out all my experiences" , "Working Experiences")
 
-
+V_SPACE(1)
 # --- Projects & Accomplishments ---
-st.write('\n')
 st.subheader("Personal Projects 🧠")
 st.write("---")
 for project, link in PROJECTS.items():
