@@ -44,4 +44,6 @@ pg = st.navigation(pages=[about_page, education_page, working_page,
 st.logo("assets/icons8-menu-240.png")
 st.sidebar.text("Created by 💕 CJ Chew")
 
+print([page.title for page in pg.pages])
+
 pg.run()
