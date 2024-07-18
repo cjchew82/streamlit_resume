@@ -41,9 +41,13 @@ pg = st.navigation(pages=[about_page, education_page, working_page,
 
 # pg = st.navigation(pages=[about_page, project_1_page, project_2_page])
 
+# Print available page names for debugging
+available_pages = [page.title for page in pg.pages]
+st.write("Available pages:", available_pages)
+
+
 st.logo("assets/icons8-menu-240.png")
 st.sidebar.text("Created by 💕 CJ Chew")
 
-print([page.title for page in pg.pages])
 
 pg.run()
