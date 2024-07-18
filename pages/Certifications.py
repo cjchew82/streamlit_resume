@@ -105,3 +105,6 @@ certification_section(SAP_CERTIFICATION_TITLE3, SAP_CERTIFICATION_LINK3, SAP_CER
 certification_section(SAP_CERTIFICATION_TITLE4, SAP_CERTIFICATION_LINK4, SAP_CERTIFICATION_DESCRIPTION4, embed_code=credly_embed_code4)
 
 certification_section(SAP_CERTIFICATION_TITLE5, SAP_CERTIFICATION_LINK5, SAP_CERTIFICATION_DESCRIPTION5, embed_code=credly_embed_code5)
+
+st.write('---')
+st.write('© Chew Chuan Juen  |  Last updated: July 2024')

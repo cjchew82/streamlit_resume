@@ -217,3 +217,6 @@ go_to_full_page("More Personal Projects" , "Personal Projects")
 # Add footer
 st.write('---')
 st.write('© Chew Chuan Juen  |  Last updated: July 2024')
+
+# Add sidebar text
+st.sidebar.text("Created by 💕 CJ Chew")
