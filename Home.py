@@ -1,15 +1,15 @@
 from pathlib import Path
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page
+# from streamlit_extras.switch_page_button import switch_page
 from PIL import Image
 import streamlit.components.v1 as components
 
 # ------------ PATH SETTINGS ----------
-current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-css_file = current_dir / "styles" / "main.css"
-resume_file = current_dir / "assets" / "CJCHEW-Resume_2023_v1.pdf"
-profile_pic = current_dir / "assets" / "home" /"profile-pic.png"
-my_zone_pic = current_dir / "assets" / "home" / "my_zone.png"
+# current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+# css_file = current_dir / "styles" / "main.css"
+# resume_file = current_dir / "assets" / "CJCHEW-Resume_2023_v1.pdf"
+# profile_pic = current_dir / "assets" / "home" /"profile-pic.png"
+# my_zone_pic = current_dir / "assets" / "home" / "my_zone.png"
 
 # # ------------ CONSTANTS ----------
 # PAGE_TITLE = "Digital Resume | CJ Chew"
@@ -316,7 +316,9 @@ certification_page = st.Page(
 pg = st.navigation(pages=[about_page, education_page, working_page, 
                           project_page, certification_page])
 
+# pg = st.navigation(pages=[about_page, project_1_page, project_2_page])
+
 st.logo("assets/icons8-menu-240.png")
 st.sidebar.text("Created by 💕 CJ Chew")
 
-pg.run
+pg.run()
