@@ -29,7 +29,7 @@ project_page = st.Page(
     title="Personal Projects",
     icon=":material/experiment:",
 )
-certification_page = st.Page(
+certifications_page = st.Page(
     "views/5_Certifications.py",
     title="Certifications",
     icon=":material/license:",
@@ -37,7 +37,7 @@ certification_page = st.Page(
 
 # --- NEVIGATION SETUP ---
 pg = st.navigation(pages=[about_page, education_page, working_page, 
-                          project_page, certification_page])
+                          project_page, certifications_page])
 
 # pg = st.navigation(pages=[about_page, project_1_page, project_2_page])
 
