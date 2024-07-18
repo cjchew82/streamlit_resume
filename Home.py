@@ -4,6 +4,8 @@ import streamlit as st
 from PIL import Image
 import streamlit.components.v1 as components
 
+st.set_page_config(page_title="Digital Resume | CJ Chew", page_icon="💼")
+
 # ------------ PATH SETTINGS ----------
 # current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 # css_file = current_dir / "styles" / "main.css"
@@ -304,7 +306,7 @@ working_page = st.Page(
 project_page = st.Page(
     "views/4_Personal_Projects.py",
     title="Personal Projects",
-    icon=":material/exoeriment:",
+    icon=":material/experiment:",
 )
 certification_page = st.Page(
     "views/5_Certifications.py",
