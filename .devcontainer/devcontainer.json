@@ -6,7 +6,11 @@
     "codespaces": {
       "openFiles": [
         "README.md",
+<<<<<<< HEAD
         "streamlit_app.py"
+=======
+        "1_🏡_Home.py"
+>>>>>>> 44c897b5f6a3e5c58c16153f9afcb16b1bfaf9dd
       ]
     },
     "vscode": {
@@ -19,7 +23,11 @@
   },
   "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y <packages.txt; [ -f requirements.txt ] && pip3 install --user -r requirements.txt; pip3 install --user streamlit; echo '✅ Packages installed and Requirements met'",
   "postAttachCommand": {
+<<<<<<< HEAD
     "server": "streamlit run streamlit_app.py --server.enableCORS false --server.enableXsrfProtection false"
+=======
+    "server": "streamlit run 1_🏡_Home.py --server.enableCORS false --server.enableXsrfProtection false"
+>>>>>>> 44c897b5f6a3e5c58c16153f9afcb16b1bfaf9dd
   },
   "portsAttributes": {
     "8501": {
