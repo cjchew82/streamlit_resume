@@ -286,28 +286,28 @@ my_zone_pic = current_dir / "assets" / "home" / "my_zone.png"
 
 # --- PAGE SETUP ---
 about_page = st.Page(
-    page="views/1_About_me.py",
+    "views/1_About_me.py",
     title="About Me",
     icon=":material/account_circle:",
     default=True,
 )
 education_page = st.Page(
-    page="views/2_Education_Background.py",
+    "views/2_Education_Background.py",
     title="Education Background",
     icon=":material/school:",
 )
 working_page = st.Page(
-    page="views/3_Working_Experiences.py",
+    "views/3_Working_Experiences.py",
     title="Working Experiences",
     icon=":material/business_center:",
 )
 project_page = st.Page(
-    page="views/4_Personal_Projects.py",
+    "views/4_Personal_Projects.py",
     title="Personal Projects",
     icon=":material/exoeriment:",
 )
 certification_page = st.Page(
-    page="views/5_Certifications.py",
+    "views/5_Certifications.py",
     title="Certifications",
     icon=":material/license:",
 )
