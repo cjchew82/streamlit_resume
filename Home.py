@@ -154,6 +154,31 @@ st.write(
 )
 go_to_full_page("See my certifications and trainings" , "Certifications")
 # go_switch_page("See my certifications and trainings" , "Certifications")
+
+# --------- Language Skills ---------
+V_SPACE(1)
+st.subheader("Language Skills 🌐")
+st.write('---')
+
+# Define the language skills data
+languages = [
+    {"language": "English", "writing": 4, "speaking": 4},
+    {"language": "Chinese", "writing": 4, "speaking": 5},
+    {"language": "Bahasa", "writing": 3, "speaking": 3},
+]
+
+# Display the table header
+cols = st.columns(3)
+cols[0].write("**Language**")
+cols[1].write("**Writing**")
+cols[2].write("**Speaking**")
+
+# Display the language skills
+for lang in languages:
+    cols = st.columns(3)
+    cols[0].write(lang["language"])
+    cols[1].markdown(f'<div class="level-bar"><div style="width: {lang["writing"] * 20}%;"></div></div>', unsafe_allow_html=True)
+    cols[2].markdown(f'<div class="level-bar"><div style="width: {lang["speaking"] * 20}%;"></div></div>', unsafe_allow_html=True)
     
 # --------- work history ---------
 V_SPACE(1)
