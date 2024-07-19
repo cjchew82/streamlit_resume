@@ -43,7 +43,6 @@ PROJECTS = {
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout="wide")
 
-# Include the Google Material Icons stylesheet
 st.markdown("""
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -51,11 +50,19 @@ st.markdown("""
             font-size: 16px; 
             font-family: 'Material Icons';
         }
-    </style>
-    <style>
         .vertical-align-middle {
             display: flex;
             align-items: center;
+            height: 50px;
+        }
+        /* Custom slider style */
+        .stSlider > div > div > div {
+            height: 8px;
+        }
+        .stSlider > div > div > div > div[role="slider"] {
+            width: 16px;
+            height: 16px;
+            background-color: #007bff;
         }
     </style>
 """, unsafe_allow_html=True)
