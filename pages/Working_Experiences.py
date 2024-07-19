@@ -143,5 +143,16 @@ with st.expander("**Successful Client Project :** "):
     for i,image in enumerate(images):
         with cols[i%3]:
             st.image(image,caption=image_captions[i],width=200)
+            
+# Add footer
 st.write('---')
 st.write('© Chew Chuan Juen  |  Last updated: July 2024')
+
+st.sidebar.markdown(
+    """
+    <div class="sidebar-footer">
+        Created by 💕 CJ Chew
+    </div>
+    """,
+    unsafe_allow_html=True
+)

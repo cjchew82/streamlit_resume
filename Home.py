@@ -9,6 +9,10 @@ current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "CJCHEW-Resume_Full.pdf"
 profile_pic = current_dir / "assets" / "home" /"profile-pic.png"
+OLMPIA_PIC_PATH = current_dir / "assets" / "academic" /"olympia.png"
+INFO_PIC_PATH = current_dir / "assets" / "academic" / "informatics.png"
+OLMPIA_PICCERT_PATH = current_dir / "assets" / "academic" / "degree.png"
+INFO_PICCERT_PATH = current_dir / "assets" / "academic" / "adiploma.png"
 
 # ------------ CONSTANTS ----------
 PAGE_TITLE = "Digital Resume | CJ Chew"
@@ -27,7 +31,6 @@ SOCIAL_MEDIA = {
     "Facebook": "",
     "Instagram": ""
 }
-
 SOCIAL_MEDIA_ICONS = {
     "LinkedIn": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png?20140125013055",
     "GitHub": "https://cdn-icons-png.flaticon.com/512/25/25231.png",
@@ -35,6 +38,25 @@ SOCIAL_MEDIA_ICONS = {
     "Facebook": "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
     "Instagram": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
 }
+#----------- Education-------------------
+# ---------- OLMPIA ------------------
+OLMPIA_PIC  = Image.open(OLMPIA_PIC_PATH)
+OLMPIA_TITLE = "**Bachelor's Degree in Computer Science/Information Technology**"
+OLMPIA_PERIOD = "03/2006 - 09/2007"
+OLMPIA_MAJOR = "Networking"
+OLMPIA_GRADE = "Grade C/2nd Class Lower"
+OLMPIA_CERT = Image.open(OLMPIA_PICCERT_PATH)
+# ---------------------------------
+
+# ---------- INFORMATICS ------------------
+INFO_PIC  = Image.open(INFO_PIC_PATH)
+INFO_TITLE = "**Bachelor's Degree in Computer Science/Information Technology**"
+INFO_PERIOD = "05/2001 - 10/2003"
+INFO_MAJOR = "Networking and Communication, Multimedia, and Internet"
+INFO_GRADE = "Grade D/3rd Class"
+INFO_CERT = Image.open(INFO_PICCERT_PATH)
+# --------------------------------------
+
 PROJECTS = {
     "📋 Digital resume streamlit ": "https://github.com/MouadEttali/streamlit_resume",
     "📊 Quantatitive Backtest App streamlit ": "",
@@ -98,7 +120,6 @@ def go_to_full_page(label,page):
 #     if click == "Personal Projects":
 #         st.switch_page("pages/5_Personal_Projects.py")
 
-
 # ----------- CSS, PDF & Profile Pic SETTINGS --------------
 
 with open(resume_file, "rb") as pdf_file:
@@ -130,7 +151,6 @@ with cols[1]:
         mime="application/octet-stream"
     )
     st.write("📤",EMAIL)
-
 
 # -------- SOCIALS ---------
 
@@ -178,6 +198,25 @@ st.write(
 )
 go_to_full_page("See my certifications and trainings" , "Certifications")
 # go_switch_page("See my certifications and trainings" , "Certifications")
+
+# --------- Education Background ---------
+V_SPACE(1)
+st.subheader("Education Background 🎓")
+st.write('---')
+
+def education_section(PIC,TITLE,PERIOD,MAJOR,GRADE,CERT=None):
+    st.image(PIC, width=200)
+    st.write(f"**{TITLE}**")
+    st.write(f"MAJOR: "f"***{MAJOR}***")
+    st.write(f"GRADE: "f"***{GRADE}***")
+    st.write(f"PERIOD: "f"***{PERIOD}***")
+    with st.expander("Check Certification"):
+        if CERT:
+            st.image(CERT, width=300)
+    st.write('---')
+    
+education_section(OLMPIA_PIC, OLMPIA_TITLE, OLMPIA_PERIOD, OLMPIA_MAJOR, OLMPIA_GRADE, OLMPIA_CERT)
+education_section(INFO_PIC, INFO_TITLE, INFO_PERIOD, INFO_MAJOR, INFO_GRADE, INFO_CERT )
 
 # --------- Language Skills ---------
 V_SPACE(1)
@@ -267,5 +306,11 @@ go_to_full_page("More Personal Projects" , "Personal Projects")
 st.write('---')
 st.write('© Chew Chuan Juen  |  Last updated: July 2024')
 
-# Add sidebar text
-st.sidebar.text("Created by 💕 CJ Chew")
+st.sidebar.markdown(
+    """
+    <div class="sidebar-footer">
+        Created by 💕 CJ Chew
+    </div>
+    """,
+    unsafe_allow_html=True
+)

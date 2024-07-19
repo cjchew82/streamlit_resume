@@ -106,5 +106,15 @@ certification_section(SAP_CERTIFICATION_TITLE4, SAP_CERTIFICATION_LINK4, SAP_CER
 
 certification_section(SAP_CERTIFICATION_TITLE5, SAP_CERTIFICATION_LINK5, SAP_CERTIFICATION_DESCRIPTION5, embed_code=credly_embed_code5)
 
+# Add footer
 st.write('---')
 st.write('© Chew Chuan Juen  |  Last updated: July 2024')
+
+st.sidebar.markdown(
+    """
+    <div class="sidebar-footer">
+        Created by 💕 CJ Chew
+    </div>
+    """,
+    unsafe_allow_html=True
+)
