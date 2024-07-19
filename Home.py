@@ -7,7 +7,7 @@ import streamlit.components.v1 as components
 # ------------ PATH SETTINGS ----------
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
-resume_file = current_dir / "assets" / "CJCHEW-Resume_2023_v1.pdf"
+resume_file = current_dir / "assets" / "CJCHEW-Resume_Full.pdf"
 profile_pic = current_dir / "assets" / "home" /"profile-pic.png"
 
 # ------------ CONSTANTS ----------
@@ -53,15 +53,15 @@ st.markdown("""
         .vertical-align-middle {
             display: flex;
             align-items: center;
-            height: 50px;
+            height: 20px;
         }
         /* Custom slider style */
         .stSlider > div > div > div {
-            height: 8px;
+            height: 10px;
         }
         .stSlider > div > div > div > div[role="slider"] {
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
             background-color: #007bff;
         }
     </style>
@@ -186,9 +186,9 @@ st.write('---')
 
 # Define the language skills data
 languages = [
-    {"language": "English", "writing": 4, "speaking": 5},
-    {"language": "Chinese", "writing": 3, "speaking": 4},
-    {"language": "Bahasa", "writing": 2, "speaking": 3},
+    {"language": "English", "writing": 5, "speaking": 5},
+    {"language": "Chinese", "writing": 4, "speaking": 5},
+    {"language": "Bahasa", "writing": 3, "speaking": 3},
 ]
 
 # Display the table header
