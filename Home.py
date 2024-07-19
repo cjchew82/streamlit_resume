@@ -43,6 +43,23 @@ PROJECTS = {
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout="wide")
 
+# Include the Google Material Icons stylesheet
+st.markdown("""
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .sidebar .css-1v3fvcr { 
+            font-size: 16px; 
+            font-family: 'Material Icons';
+        }
+    </style>
+    <style>
+        .vertical-align-middle {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Function to generate social media icons
 def social_media_icon(link, icon_url, name):
     return f'''
@@ -162,23 +179,23 @@ st.write('---')
 
 # Define the language skills data
 languages = [
-    {"language": "English", "writing": 4, "speaking": 4},
-    {"language": "Chinese", "writing": 4, "speaking": 5},
-    {"language": "Bahasa", "writing": 3, "speaking": 3},
+    {"language": "English", "writing": 4, "speaking": 5},
+    {"language": "Chinese", "writing": 3, "speaking": 4},
+    {"language": "Bahasa", "writing": 2, "speaking": 3},
 ]
 
 # Display the table header
 cols = st.columns(3)
 cols[0].write("**Language**")
-cols[1].write("**Writing**")
-cols[2].write("**Speaking**")
+cols[1].markdown("**<div style='text-align: center;'>Writing</div>**", unsafe_allow_html=True)
+cols[2].markdown("**<div style='text-align: center;'>Speaking</div>**", unsafe_allow_html=True)
 
 # Display the language skills
-for lang in languages:
+for i, lang in enumerate(languages):
     cols = st.columns(3)
-    cols[0].write(lang["language"])
-    cols[1].markdown(f'<div class="level-bar"><div style="width: {lang["writing"] * 20}%;"></div></div>', unsafe_allow_html=True)
-    cols[2].markdown(f'<div class="level-bar"><div style="width: {lang["speaking"] * 20}%;"></div></div>', unsafe_allow_html=True)
+    cols[0].markdown(f"<div class='vertical-align-middle'>{lang['language']}</div>", unsafe_allow_html=True)
+    cols[1].slider("", 1, 5, lang["writing"], disabled=True, key=f"writing_{i}")
+    cols[2].slider("", 1, 5, lang["speaking"], disabled=True, key=f"speaking_{i}")
     
 # --------- work history ---------
 V_SPACE(1)
