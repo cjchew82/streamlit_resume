@@ -148,11 +148,5 @@ with st.expander("**Successful Client Project :** "):
 st.write('---')
 st.write('© Chew Chuan Juen  |  Last updated: July 2024')
 
-st.sidebar.markdown(
-    """
-    <div class="sidebar-footer">
-        Created by 💕 CJ Chew
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# Add sidebar text
+st.sidebar.text("Created by 💕 CJ Chew")
